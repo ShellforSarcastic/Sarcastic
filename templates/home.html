@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/home.css')}}">
+    <title>Sarcastic.io
+    </title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="/" class="headerlogo">
+                Sarcastic.io
+            </a>
+        </div>
+        <div class="cta">
+            <a href="/trial">
+                <button class="cta__button">
+                    Try Now?
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Filtering relevant comments
+                    for <span>You</span> </h1>
+                <p class="hero__text">Analyze your comments for sarcasm in an instant</p>
+                <div class="hero__buttons">
+                    <a href="/trial">
+                        <button class="cta__button">Free Trial?</button>
+                    </a>
+                    <button class=" cta__button cta__button-secondary">API?</button>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="{{url_for('static',filename='images/hero.png')}}" alt="">
+
+            </div>
+        </section>
+        <section class="featureCards">
+            <div class="featureCard">
+                <div class="card__header">
+                    <img src={{url_for('static', filename='images/plugandplay.png' )}} alt="" class="card__icon">
+                    <p class="card__title">Plug and play</p>
+                </div>
+                <div class="card__body">
+                    <p>No more worrying about your developers not
+                        understanding the documentation with easy API
+                        integration</p>
+                </div>
+            </div>
+            <div class="featureCard">
+                <div class="card__header">
+                    <img src={{url_for('static', filename='images/quick.png' )}} alt="" class="card__icon">
+                    <p class="card__title">Quick Analysis</p>
+                </div>
+                <div class="card__body">
+                    <p>Such lightning-quick analysis that your moderators will need to call for breaks</p>
+                </div>
+            </div>
+            <div class="featureCard">
+                <div class="card__header">
+                    <img src={{url_for('static', filename='images/costeffective.png' )}} alt="" class="card__icon">
+                    <p class="card__title">Cost Effective</p>
+                </div>
+                <div class="card__body">
+                    <p>High precision analysis at a reasonable cost with a free trial offer</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact__wrapper">
+                <p class="contact__title">
+                    Get in Touch
+                </p>
+                <form class="contactform" action="/form" method="post">
+                    <div class="contactform__inputs">
+                        <input type="text" name="name" placeholder="Enter your Name">
+                        <input type="email" name="email" placeholder="Work Email">
+                        <input type="text" name="company" placeholder="Company Name">
+                    </div>
+                    <textarea name="message" class="contactMeassage"></textarea>
+                    <button class="formbutton">Submit</button>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+}
+.background-gradient {
+	background: linear-gradient(
+		88.04deg,
+		rgba(34, 87, 122, 0.8) 0%,
+		rgba(87, 204, 153, 0.8) 100%
+	);
+}
+
+.form-title {
+	font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+.formtext {
+	resize: none;
+	outline: none;
+	width: 100%;
+	height: 20ch;
+}
+
+@media screen and (min-width: 55em) {
+	.formtext {
+		height: 40ch;
+		width: 70%;
+	}
+}
+@media screen and (min-height: 55em) {
+	.formtext {
+		max-height: 40ch;
+	}
+}
+.form-wrapper {
+	min-height: 75vh;
+	max-height: 900px;
+}
+.border-radius {
+	border-radius: 2rem;
+}
+.border-gradient {
+	position: relative;
+	padding: 2rem;
+}
+.border-gradient::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 2rem;
+	background: linear-gradient(
+		88.04deg,
+		rgba(34, 87, 122, 0.8) 0%,
+		rgba(87, 204, 153, 0.8) 100%
+	);
+	padding: 0.5rem;
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	height: 90vh;
+}
+
+.resultmeter {
+	width: 500px;
+	height: 25px;
+	border-radius: 3px;
+
+	border: 1px solid #ccc;
+}
