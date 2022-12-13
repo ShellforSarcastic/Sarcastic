@@ -1,2 +1,2 @@
 Flask>=2.2
-tensorflow>=2.10
+tensorflow
